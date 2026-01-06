@@ -7,7 +7,7 @@ model = pickle.load(open('delivery_model.pkl', 'rb'))
 scaler = pickle.load(open('scaler.pkl', 'rb'))
 
 st.title("🍔 Food Delivery Time Predictor")
-st.write("Apni delivery details enter karein aur exact time payein.")
+st.write("Enter your delivery details to get an accurate time estimate.")
 
 # User Inputs
 dist = st.number_input("Distance (km)", min_value=0.5)
