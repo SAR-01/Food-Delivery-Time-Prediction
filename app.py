@@ -25,4 +25,4 @@ if st.button("Predict Time"):
 
     st.success(f"Estimated Time: {prediction[0]:.2f} Minutes")
 
-!streamlit run app.py
+
