@@ -12,7 +12,7 @@ st.write("Enter your delivery details to get an accurate time estimate.")
 # User Inputs
 dist = st.number_input("Distance (km)", min_value=0.5)
 prep = st.number_input("Preparation Time (min)", min_value=5)
-exp = st.number_input("Courier Experience (yrs)", min_value=0)
+exp = st.number_input("Rider Experience (yrs)", min_value=0)
 
 if st.button("Predict Time"):
     # Input ko format karein
