@@ -15,17 +15,15 @@ exp = st.number_input("Rider Experience (yrs)", min_value=0)
 if st.button("Predict Time"):
     features = np.array([[dist, 1, 1, 1, 1, prep, exp]])
     scaled_features = scaler.transform(features)
-    prediction = model.predict(scaled_features)[0]  # Total minutes extract karein
-
-    # Calculation logic
+    prediction = model.predict(scaled_features)[0] 
+    
     hours = int(prediction // 60)
     minutes = int(prediction % 60)
     seconds = int((prediction * 60) % 60)
-
-    # Display Result
+    
     if hours > 0:
-        time_text = f"{hours} hrs {minutes} min {seconds} sec"
+        time_text = f"{hours} Hours {minutes} Minutes {seconds} Seconds"
     else:
-        time_text = f"{minutes} min {seconds} sec"
+        time_text = f"{minutes} Minutes {seconds} Seconds"
         
-    st.success(f"⏳ Estimated Delivery Time: {time_text}")
+    st.success(f" Estimated Delivery Time: {time_text}")
