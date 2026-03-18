@@ -45,7 +45,7 @@ if st.session_state['prediction_text']:
     st.success(f" Estimated Delivery Time: {st.session_state['prediction_text']}")
     
     st.markdown("---")
-    st.write("### 📝 Feedback")
+    st.write("###  Feedback")
     
     rating = st.slider("Rate This Prediction Accuracy (1 = Poor, 5 = Excellent):", 1, 5, 3)
     
